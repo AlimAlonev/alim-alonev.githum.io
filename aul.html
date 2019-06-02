@@ -1,0 +1,134 @@
+﻿<! Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Кызыл-Суу!!!</title>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="zar.css">
+    </head>
+<body>
+        <div id="twe">
+            <div class="nebo">
+            <div id="logo">
+                <img src="pictures/logot.jpg" class="logo" alt="Кызыл-Суу" title="Кызыл-Суу">
+            </div> 
+        <div>
+        <ul class="menu">
+            <li class="menu_item"><a href="Zal.html"class="menu_link">Башкы бет </a></li>
+            <li class="menu_item"><a href="Kabarlar.html" class="menu_link">Соңку кабарлар </a></li>
+            <li class="menu_item"><a href="Taryh.html"class="menu_link">Санжыра </a></li>
+             <li class="menu_item"><a href="Elet-Bayan.html"class="menu_link">Элет-Баяны</a></li>
+            <li class="menu_item"><a href="aul.html"class="menu_link">Ыйман </a></li>
+            <li class="menu_item"><a href="#"class="menu_link">Галерея </a><ul class="menu">
+                    <li class="menu_item"><a href="Galereya.html" class="menu_link">Фото</a></li>
+                    <li class="menu_item"><a href="#2" class="menu_link">Видео</a></li>
+                    <li class="menu_item"><a href="#3" class="menu_link">Элдик видео</a></li>
+                </ul></li>
+            <li class="menu_item"><a href="Kayrymduuluk.html"class="menu_link">Кайрымдуулук </a></li>
+            </ul>
+        </div>
+            </div>
+            <div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                              <td class="left">
+                                 <div align=center>
+<div style="width:165px; border:1px solid #c0c0c0; padding:6px;">
+<table id="calendar"  border="0" cellspacing="0" cellpadding="1">
+  <thead>
+    <tr><td><b>‹</b><td colspan="5"><td><b>›</b>
+    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+</div>
+
+<script>
+function calendar(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+if (DNfirst != 0) {
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td>';
+}
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
+  }else{
+    calendar += '<td>' + i;
+  }
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
+  }
+}
+for(var  i = DNlast; i < 7; i++) calendar += '<td> ';
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td> <td> <td> <td> <td> <td> <td> ';
+}
+}
+calendar("calendar", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+  calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+  calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)+1);
+}
+</script>
+                        </td>
+            <td class="niz">
+            <header class="box_header"><h1 class="head">Ыйман</h1></header>
+            
+                        </td>
+                        <td class="right">
+<div class="category-wrap">
+  <ul>
+      <li><a href="Mektep.html">Айыл-Өкмөт</a></li>
+    <li><a href="Mektep.html">Мектеп</a></li>
+    <li><a href="Bakcha.html">Бала-бакча</a></li>
+    <li><a href="Oorukana.html">Оорукана</a></li>
+    <li><a href="Mechit.html">Мечит</a></li>
+    <li><a href="Sport.html">Спорт</a></li>
+  </ul>
+</div>
+                            <script src="http://www.inform.kg/informers/pogoda_kg1.php"></script><br>
+                            <a href="http://www.inform.kg/" target="_blank"><img src="http://www.inform.kg/informers/currency1.php" width="160" height="110" border="0" alt="Курсы валют Кыргызстана по отношению к сому" title="Курсы валют Кыргызстана по отношению к сому"></a>
+                        </td>
+        </div>
+                </table>
+    </div>
+    <footer id="footer_site">
+                <div class="copyright_text">
+<span>&copy;Kyzyl-Suu 2018 </span>
+</div>
+                <ul class="widget">
+                    <li>
+                        <a href="#" id="vk" class="fa fa-vk" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="face" class="fa fa-facebook" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="insta" class="fa fa-instagram" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="twitter" class="fa fa-twitter" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="ok" class="fa fa-odnoklassniki" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="you" class="fa fa-youtube" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="what" class="fa fa-whatsapp" aria-hidden="true"></a></li>
+                </ul>
+            </footer>
+    </div>
+</body>
+    </html>

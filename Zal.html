@@ -1,0 +1,180 @@
+﻿<! Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Кызыл-Суу!!!</title>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="zar.css">
+    </head>
+<body>
+        <div id="twe">
+            <div class="nebo">
+            <div id="logo">
+                <img src="pictures/logot.jpg" class="logo" alt="Кызыл-Суу" title="Кызыл-Суу">
+                </div>
+        <div>
+        <ul class="menu">
+            <li class="menu_item"><a href="Zal.html"class="menu_link">Башкы бет </a></li>
+            <li class="menu_item"><a href="Kabarlar.html" class="menu_link">Соңку кабарлар </a></li>
+            <li class="menu_item"><a href="Taryh.html"class="menu_link">Санжыра </a></li>
+             <li class="menu_item"><a href="Elet-Bayan.html"class="menu_link">Элет-Баяны</a></li>
+            <li class="menu_item"><a href="aul.html"class="menu_link">Ыйман </a></li>
+            <li class="menu_item"><a href="#"class="menu_link">Галерея </a>
+             <ul class="menu">
+                    <li class="menu_item"><a href="Galereya.html" class="menu_link">Фото</a></li>
+                    <li class="menu_item"><a href="#2" class="menu_link">Видео</a></li>
+                    <li class="menu_item"><a href="#3" class="menu_link">Элдик видео</a></li>
+                </ul></li>
+            <li class="menu_item"><a href="Kitepkana.html"class="menu_link">Китепкана </a></li>
+            <li class="menu_item"><a href="Kayrymduuluk.html"class="menu_link">Кайрымдуулук </a></li>
+            </ul>
+        </div>
+            </div>
+            <div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                              <td class="left">
+                                  <div class="category-wrap">
+  <ul>
+      <li><a href="#"><h3>Кызыл-Суу жаштар уюму</h3></a></li>
+  </ul>
+</div>
+                                 <div align=center>
+<div style="width:165px; margin-top: 10px; border:1px solid #c0c0c0; padding:6px;">
+<table id="calendar"  border="0" cellspacing="0" cellpadding="1">
+  <thead>
+    <tr><td><b>‹</b><td colspan="5"><td><b>›</b>
+    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+</div>
+
+<script>
+function calendar(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+if (DNfirst != 0) {
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td>';
+}
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
+  }else{
+    calendar += '<td>' + i;
+  }
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
+  }
+}
+for(var  i = DNlast; i < 7; i++) calendar += '<td> ';
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td> <td> <td> <td> <td> <td> <td> ';
+}
+}
+calendar("calendar", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+  calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+  calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)+1);
+}
+</script>
+                        </td>
+            <td class="niz">
+            <header class="box_header"><h1 class="h11">Кызыл-Суу айылынын сайтына кош келиңиздер!</h1></header>
+            <img class="tank" src="pictures/tank.jpg.jpg">
+            <p>
+                <strong>Кызыл-Суу</strong> (от англ. <strong>Kyzyl-Suu</strong>) hjkfgkhdfgjkfdhgjkfdhgjkhfdghdfjk ghjkfdjghjkdfghfdjkghdkfjghjkghdfjkghfgj kfgjhfjgh fjghfjghfjghfjg hjfghfjghjfghjfghjfghjkdfghkjdfkjhfjlksdfj lksjfkljselrouityrhjkg mvmcxmmnmxv mvmsdmbntgb rtkwtowerhwejkjfhdkjvxchkbyu iobycuvibyuiyw uthwhalfsyacfy fuogiogjhghadfjgha kgha;lket oituogujdaflkgjl; yhaejghjkshas idfyfi7ytyq4ga dshkjfh aklhtq4kjl 5yhi4lu yiaufta yftauyt rfaytgrrg agfgrjfgj atgjagtart rf7wtfdtf uyagfag fjdasgfja sdgfdfgds afgasdkfgj dasgf hjgf</p>
+            <p>
+    Самые ранние свидетельства подобsных состязаний запечатлены ещё на шумерских, египетских и минойских рельефах. Турниры по кулачным боям, напоминающим бокс, проходили ещё в Древней Греции. По-настоящему бокс стал спортивным единоборством в 688 году до н. э., когда кулачные бои были впервые включены в программу античных Олимпийских игр. Современный бокс зародился в Англии в начале XVIII века.</p>
+<p >
+    В некоторых странах существуют собственные разновидности бокса (французский бокс (симбиоз савата, английского бокса и фехтования на тростях) во Франции, летхвей в Мьянме, муай-тай в Таиланде), поэтому часто используется термин «английский бокс».</p>
+
+            <h2>Ранний период истории бокса</h2>
+            <p>Первое изображение боя было сделано в шумерской пещере в третьем тысячелетии до н. э., а древнеегипетский рельеф второго тысячелетия до н. э. запечатлил уже не только боксёров, но и зрителей. Но оба бойца дерутся голыми руками. В 1927 году американский археолог Спенсер обнаружил в Багдаде каменные плиты с рисунком, на котором два человека готовятся к поединку. Принято считать, что возраст этой находки — 7000 лет.</p>
+
+            <p>Кулачные бои также описывались в древних индийских текстах: в Ведах, Рамаянах, Махабхарате. Свидетельства существования бокса были найдены и во время раскопок в городах Мохенджо-Даро и Хараппа.</p>
+
+            <p >Первые находки, подтверждающие боксирование в перчатках, датированы 1500—900 годами до нашей эры на Крите и в горах Сардинии (2000—1000 до нашей эры).</p>
+
+            <h2>Бокс в Древней Греции</h2>
+<p>
+    Ливанцы и этруски называли бокс пугилизмом. В Средиземноморье не было разделения на весовые категории, а клинч был строго запрещён. В поединках не было раундов, и часто они не ограничивались по времени, заканчиваясь нокаутом, признанием поражения одним из участников, а иногда даже смертью. Хотя при тренировке использовались перчатки, во время состязаний участники обматывали руки полосками из твёрдой кожи, которые защищали кулаки.</p>
+
+            <p>Двадцать третья песня «Илиады» Гомера подробно рассказывает о боксёрском поединке между Эвреалом и Эпеосом. Согласно «Илиаде», бокс был включён микенскими воинами в соревнования в честь умерших. Другая легенда гласит, что Тесей во время своего правления учредил разновидность бокса, в которой два участника садились друг напротив друга и били кулаками, пока один из них не умирал. С прошествием времени поединки стали проводиться стоя, а участники обматывали руки ниже локтя.</p>
+
+            <p >В 688 году до н. э. бокс был впервые включён в программу 23-х античных Олимпийских игр. Принято считать, что создателем правил кулачных поединков, известных в то время как пигме (pygme), был Геракл. Существует легенда, что спартанцы перед тем, как научиться владеть мечом и щитом, также проходили школу бокса.</p>
+
+            <p >Соревнования в Древней Греции проходили на квадратной площадке, посыпанной песком, а ограждением этого «ринга» были зрители. За соблюдением правил следил судья — гелладоник. Если в установленное время ни один из участников не уступал другому — назначался обмен ударами без защиты. К участию в Олимпиаде допускались только люди, рождённые свободными. Тренировки проходили в специальных школах — палестрах, спортсмены отрабатывали технику на мешках (назывались korykos) и во избежание травм во время поединков обматывали ремнями руки, запястья и иногда грудь.</p>
+
+            <h2>Бокс в Древнем Риме</h2>
+            <p >В Древнем Риме существовало две разновидности бокса, и обе они происходили от этрусских традиций. Во всём Риме был популярен народный «бокс», но также существовал и гладиаторский вариант боя. Участниками подобных поединков в основном были преступники и рабы, которые надеялись завоевать свободу, но иногда бились свободные люди, аристократы и даже женщины. Гладиаторы дрались в своеобразных перчатках, иногда с шипами. Тело боксёра из Квиринал, покрытое рубцами, а также его ухо, деформированное от ударов, показывает, насколько жестокими были соревнования в то время.</p>
+
+            <p >Популярность кулачных боёв привела к тому, что даже императоры начали принимать в них участие, первым из них стал Нерон.</p>
+
+            <p >В 393 году римский император Феодосий по настоянию духовенства запретил проводить Олимпийские игры, потому что они считались языческим празднеством, а в 500 году Теодорих Великий запретил бокс, как спорт, оскорбляющий Бога: ведь символ Бога, лицо, подвергался ударам. Однако этот указ не сильно повлиял на спортивную жизнь городов, находящихся за пределами Восточной империи. К этому времени Западная Европа перестала быть частью Римской империи, и здесь бокс оставался популярным на протяжении Средних веков и позже. Следует отметить, что борьба, фехтование и гонки колесниц никогда не попадали под запрет, так как они не вызывали физических дефектов.</p>
+
+            <h1><ins>Современный вариант</ins></h1>
+            <h2>Кулачный бой</h2>
+<p>
+    После падения Рима не было найдено свидетельств, подтверждающих существование классического бокса, однако спорт сохранился и продолжал развиваться в различных городах и провинциях Италии (где в XIII веке был принят закон, разрешающий боксёрские поединки). В Древней Руси также часто проводились кулачные бои, а в начале XVII века в Англии набрал популярность бокс голыми руками, тогда же возникло и само название «бокс». Считается, что первым официально задокументированным поединком по боксу был бой между мясником и лакеем герцога Альбемарльского (заметка об этом была опубликована в газете Protestant Mercury за январь 1681 года). Однако имеются ещё более ранние упоминания. В жизнеописании Джона Пэррота (Королевского представителя в Ирландии в 1582—1588 годах) упоминается его поединок с лордом г. Абергавенни, а также его стычка с двумя лейб-гвардейцами, имевшие место в середине 16-го века. В дневниках Сэмюеля Пеписа (члена Английского Парламента в 17-м веке) за 5 августа 1660 года упоминается стычка между немцем по имени Mynheer Clinke и водоносом возле Вестминстерской лестницы.</p>
+            <p>
+                fsdgfgj sdg hg k df dfhythgk dhhj fg;dfjsal gadgdhfkj ktgrewkjjdfkgkjllk ;elrytiot;ejgkl; hjkerhjh sdkf fdsg e dsgferkh ert gd sdfg rg dfh hjryry grg hr r rhrhy r rth  tr rtg rbryh h eyeyeryhetr tr gwtrjk yyu jk etwqg eq r qwf q  hj8yjyrjy9 nryikukrjth rqegfegqerf w  erftgedwedx rwgttdhhtrb rwefgreg asdfvghehtyjjykuiolt ytjjreyrefgewr dfewfergrthtyjt trhrhetghwthe gtwhetyjytkyt ryh7ejhrewyhetg rwqgtwhrywj7yreh </p>
+<p>
+    rthr yjhgd jgjkgfjkg khjk hsdgfsaf feserfs efe w etgrwgrehyrhryh hrjyhryhyrhj rhyjhtjtuj tjtyjtu7jtyh ryjhryh trhtrhtrhrth wrghrrew f frefewfgegthg tgwthwghtgg wethgwhytjyrk rtjujuyrjkiykrhrteg fwreqfwergrht7hehreg wtgtwgwrgvtwheyh yjejtyhtregwqfqwe fwefcreghu76ik97l 7il7kjtr hjtwgrefwev yrhtu68ik5789uj764yhu 6g4ryh46yh3g g563hj57u 67uh7 5u76j4ne y </p>
+                        </td>
+                        <td class="right">
+<div class="category-wrap">
+  <ul>
+      <li><a href="Mektep.html">Айыл-Өкмөт</a></li>
+    <li><a href="Mektep.html">Мектеп</a></li>
+    <li><a href="Bakcha.html">Бала-бакча</a></li>
+    <li><a href="Oorukana.html">Оорукана</a></li>
+    <li><a href="Mechit.html">Мечит</a></li>
+    <li><a href="Sport.html">Спорт</a></li>
+  </ul>
+</div>
+                            <script src="http://www.inform.kg/informers/pogoda_kg1.php"></script><br>
+                            <a href="http://www.inform.kg/" target="_blank"><img src="http://www.inform.kg/informers/currency1.php" width="160" height="110" border="0" alt="Курсы валют Кыргызстана по отношению к сому" title="Курсы валют Кыргызстана по отношению к сому"></a>
+                        </td>
+        </div>
+                </table>
+    </div>
+    <footer id="footer_site">
+                <div class="copyright_text">
+<span>&copy;Kyzyl-Suu 2018 </span>
+</div>
+                <ul class="widget">
+                    <li>
+                        <a href="#" id="vk" class="fa fa-vk" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="face" class="fa fa-facebook" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="insta" class="fa fa-instagram" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="twitter" class="fa fa-twitter" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="ok" class="fa fa-odnoklassniki" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="you" class="fa fa-youtube" aria-hidden="true"></a></li>
+                    <li>
+                        <a href="#" id="what" class="fa fa-whatsapp" aria-hidden="true"></a></li>
+                </ul>
+            </footer>
+    </div>
+</body>
+    </html>
